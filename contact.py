@@ -1,7 +1,7 @@
 contacts = []
 name_set = set()
 def add_contact():
-    name = input("Enter a name: ").strip
+    name = input("Enter a name: ").strip()
     if name in name_set:
         print("Name already Exists! ")
         return
@@ -22,3 +22,18 @@ def veiw_contact():
     print("\n--  All Contacts --")
     for idx, contact in enumerate(contacts, start=1):
         print(f"{idx}. {contact['name']} - {contact['phone']}")
+
+
+
+def search_contact():
+    search_name = input("Enter name to search").strip().title()
+    found = False
+    for contact in contacts:
+        if contact['name'] == search_name:
+            print(f"Found: {contact['name']} - {contact['phone']} ")
+            found = True
+            break
+        if not found:
+            print("contact not found")
+    
+

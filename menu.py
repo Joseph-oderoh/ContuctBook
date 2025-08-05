@@ -7,5 +7,5 @@ def display_menu():
 
 
 def get_user_choice():
-    return input("choose your option 1-4")
+    return input("choose your option 1-4: ")
     # print(get_user_choice)
